@@ -14,7 +14,6 @@ let
   '';
 in
 {
-  plugins.cmp-emoji.enable = true;
   plugins.cmp-nvim-lsp.enable = true;
   plugins.cmp-buffer.enable = true;
   plugins.cmp-path.enable = true;
@@ -54,13 +53,6 @@ in
           };
         }
         {
-          name = "nvim_lsp_document_symbol";
-          priority = 1000;
-          option = {
-            inherit get_bufnrs;
-          };
-        }
-        {
           name = "luasnip";
           priority = 750;
         }
@@ -74,14 +66,6 @@ in
         {
           name = "path";
           priority = 300;
-        }
-        {
-          name = "cmdline";
-          priority = 300;
-        }
-        {
-          name = "git";
-          priority = 250;
         }
         {
           name = "emoji";
@@ -138,26 +122,19 @@ in
     -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
     cmp.setup.cmdline({'/', "?" }, {
       sources = {
-        { name = 'buffer' }
-      }
-    })
-
-    -- Set configuration for specific filetype.
-    cmp.setup.filetype('gitcommit', {
-      sources = cmp.config.sources({
-        { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
-      }, {
+        { name = 'nvim_lsp_document_symbol' },
         { name = 'buffer' },
-      })
+        { name = 'cmdline_history' },
+      }
     })
 
     -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
     cmp.setup.cmdline(':', {
-      sources = cmp.config.sources({
-        { name = 'path' }
-      }, {
-        { name = 'cmdline' }
-      }),
+      sources = cmp.config.sources {
+        { name = 'cmdline' },
+        { name = 'cmdline_history' },
+        { name = 'path' },
+      },
     })
   '';
 }
