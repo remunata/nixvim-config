@@ -50,13 +50,63 @@
       snippets = {
         preset = "luasnip";
       };
-    };
 
-    signature = {
-      enabled = true;
+      signature = {
+        enabled = true;
 
-      window = {
-        border = "rounded";
+        window = {
+          border = "rounded";
+        };
+      };
+
+      sources = {
+        default = [
+          "buffer"
+          "lsp"
+          "path"
+          "snippets"
+        ];
+
+        providers = {
+          buffer = {
+            name = "Buffer";
+            module = "blink.cmp.sources.buffer";
+            score_offset = 0;
+          };
+
+          lsp = {
+            name = "LSP";
+            module = "blink.cmp.sources.lsp";
+            async = false;
+            enabled = true;
+            max_items = null;
+            min_keyword_length = 0;
+            override = null;
+            score_offset = 4;
+            should_show_items = true;
+            timeout_ms = 2000;
+
+            fallbacks = [
+              "buffer"
+            ];
+          };
+
+          path = {
+            name = "Path";
+            module = "blink.cmp.sources.path";
+            score_offset = 0;
+
+            fallbacks = [
+              "buffer"
+            ];
+
+            opts = {
+              label_trailing_slash = true;
+              show_hidden_files_by_default = false;
+              trailing_slash = false;
+            };
+          };
+        };
       };
     };
   };
