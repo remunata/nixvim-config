@@ -1,7 +1,7 @@
 {
   imports = [
     ./autopairs.nix
-    ./cmp.nix
+    ./blink-cmp.nix
     ./schemastore.nix
   ];
 }
