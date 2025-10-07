@@ -16,7 +16,7 @@
         jsonls.enable = true;
         bashls.enable = true;
         yamlls.enable = true;
-        tsgo.enable = true;
+        ts_ls.enable = true;
         nixd = {
           enable = true;
           settings = {
