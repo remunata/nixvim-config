@@ -23,6 +23,16 @@
           desc = "Buffer";
           mode = "n";
         }
+        {
+          __unkeyed-1 = "<leader>c";
+          desc = "Code";
+          mode = "n";
+        }
+        {
+          __unkeyed-1 = "<leader>m";
+          desc = "Markdown";
+          mode = "n";
+        }
       ];
     };
   };

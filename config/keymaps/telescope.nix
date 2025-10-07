@@ -76,7 +76,7 @@
     }
     {
       mode = [ "n" ];
-      key = "<leader>sd";
+      key = "<leader>cd";
       action = "<cmd>Telescope diagnostics<CR>";
       options.desc = "Search diagnostics";
     }
