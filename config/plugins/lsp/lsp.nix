@@ -3,7 +3,6 @@
   plugins = {
     lsp-lines.enable = true;
     lsp-format.enable = true;
-    helm.enable = true;
 
     lsp = {
       enable = true;
@@ -16,6 +15,7 @@
         html.enable = true;
         jsonls.enable = true;
         bashls.enable = true;
+        yamlls.enable = true;
         tsgo.enable = true;
         nixd = {
           enable = true;
