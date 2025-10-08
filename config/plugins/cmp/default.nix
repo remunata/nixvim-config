@@ -1,8 +1,8 @@
 {
   imports = [
     ./autopairs.nix
-    ./cmp.nix
-    ./lspkind.nix
+    ./blink-cmp.nix
     ./schemastore.nix
+    ./ts-autotag.nix
   ];
 }

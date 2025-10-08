@@ -1,5 +1,5 @@
 {
-  plugins.luasnip = {
+  plugins.ts-autotag = {
     enable = true;
   };
 }
