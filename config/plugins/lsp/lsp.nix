@@ -17,6 +17,7 @@
         bashls.enable = true;
         yamlls.enable = true;
         ts_ls.enable = true;
+        phpactor.enable = true;
         nixd = {
           enable = true;
           settings = {

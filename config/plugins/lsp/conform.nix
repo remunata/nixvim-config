@@ -16,7 +16,7 @@
         rust = [ "rustfmt" ];
         java = [ "google-java-format" ];
         bash = [ "shfmt" ];
-        sh = [ "shfmt" ];
+        php = [ "php-cs-fixer" ];
         python = [
           "isort"
           "black"
